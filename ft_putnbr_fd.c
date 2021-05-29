@@ -15,15 +15,12 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int sign;
-
 	n == -2147483648 ? write(fd, "-2147483648", 11) : 0;
 	n == 0 ? write(fd, "0", 1) : 0;
 	if (n == -2147483648)
 		return ;
 	if (n == 0)
 		return ;
-	sign = (n > 0 ? 0 : 1);
 	n > 0 ? 0 : ft_putchar_fd('-', fd);
 	n = (n > 0 ? n : n * -1);
 	if (n > 9)

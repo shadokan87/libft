@@ -35,7 +35,7 @@ char	*ft_itoa(int n)
 	if (n == -2147483648 || n == 0)
 		return (ft_strdup(n == 0 ? "0" : "-2147483648"));
 	negative = n > 0 ? 0 : 1;
-	n = (negative) ? n *= -1 : n;
+	(negative) ? (n = n * -1) : 0;
 	i = 0;
 	if (!(ret = malloc(sizeof(char) * count(n) + ((negative) ? 2 : 1))))
 		return (0);

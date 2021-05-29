@@ -47,7 +47,6 @@ int		len_trim(char *s1, const char *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
 	char	*str;
 	int		len;
 	char	*s2;
@@ -56,7 +55,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	s2 = (char*)s1;
 	len = len_trim(s2, set);
-	i = 0;
 	if (!(str = malloc(sizeof(char) * len + 1)))
 		return (0);
 	while (check_set(*s2, set))
